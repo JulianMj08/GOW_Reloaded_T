@@ -366,6 +366,109 @@ body {
   gap: 0.25rem;
 }
 
+.card-status {
+  /* background: var(--color-accent); */
+  color: var(--color-primary);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* ==============================
+   TEAMS DROPDOWN
+   ============================== */
+
+.teams-dropdown {
+  position: relative;
+}
+
+.teams-toggle {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  transition: all var(--transition-base);
+}
+
+.teams-toggle:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+.dropdown-icon {
+  transition: transform var(--transition-base);
+  display: inline-block;
+  font-size: 0.75rem;
+}
+
+.teams-toggle.active .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.teams-list {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all var(--transition-base);
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.teams-list.active {
+  max-height: 300px;
+  opacity: 1;
+  overflow-y: auto;
+}
+
+.team-item {
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-soft);
+  transition: background var(--transition-fast);
+}
+
+.team-item:last-child {
+  border-bottom: none;
+}
+
+.team-item:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.team-name {
+  color: var(--color-text-heading);
+  font-weight: 500;
+}
+
+.team-status {
+  background: var(--color-accent);
+  color: #052e16;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 /* ==============================
    RULES
    ============================== */
