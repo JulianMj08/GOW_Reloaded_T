@@ -1,0 +1,12 @@
+{
+  "name": "gears_reloaded_tournaments",
+  "version": "1.0.0",
+  "description": "Plataforma de torneos para la comunidad de GOW Reloaded",
+  "license": "ISC",
+  "author": "Julian Gomez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
