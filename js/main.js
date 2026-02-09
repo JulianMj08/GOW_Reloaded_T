@@ -69,3 +69,59 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// ================= AGENTS CAROUSEL =================
+
+document.addEventListener('DOMContentLoaded', () => {
+  const agentsTrack = document.querySelector('.agents-track');
+  const prevBtn = document.querySelector('.carousel-btn--prev');
+  const nextBtn = document.querySelector('.carousel-btn--next');
+  const agentCards = document.querySelectorAll('.agent-card');
+
+  if (!agentsTrack) return;
+
+  let currentIndex = 0;
+
+  const getCardWidth = () => {
+    const card = agentCards[0];
+    const style = window.getComputedStyle(card);
+    const width = card.offsetWidth;
+    const gap = parseFloat(style.marginRight) || 24; // 1.5rem = 24px
+    return width + gap;
+  };
+
+  const scrollToCard = (index) => {
+    const cardWidth = getCardWidth();
+    const scrollAmount = cardWidth * index;
+    agentsTrack.scrollLeft = scrollAmount;
+  };
+
+  const updateButtonStates = () => {
+    const maxIndex = agentCards.length - 1;
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === maxIndex;
+    
+    prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+    nextBtn.style.opacity = currentIndex === maxIndex ? '0.5' : '1';
+  };
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      scrollToCard(currentIndex);
+      updateButtonStates();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < agentCards.length - 1) {
+      currentIndex++;
+      scrollToCard(currentIndex);
+      updateButtonStates();
+    }
+  });
+
+  // Inicializar estados
+  updateButtonStates();
+});
+
+

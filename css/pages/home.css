@@ -330,6 +330,108 @@ body {
 }
 
 /* ==============================
+   FREE AGENTS – PLAYER CARDS
+   ============================== */
+
+.section__subtitle {
+  max-width: 600px;
+  color: var(--color-text-muted);
+  margin-bottom: 3rem;
+}
+
+.agents {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Card */
+.agent-card {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-card),
+    rgba(21, 27, 52, 0.75)
+  );
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  border: 1px solid var(--color-border-soft);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base),
+              border-color var(--transition-base);
+}
+
+.agent-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Header */
+.agent-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.agent-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Status dot */
+.agent-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+}
+
+.agent-status.online {
+  background: var(--color-accent);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
+}
+
+/* Role */
+.agent-role {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* Info list */
+.agent-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* Badge */
+.agent-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+
+
+
+
+/* ==============================
    TOURNAMENTS
    ============================== */
 
@@ -502,6 +604,162 @@ body {
 .community p {
   color: var(--color-text-muted);
   margin-bottom: 2rem;
+}
+
+/* ==============================
+   FREE AGENTS CAROUSEL
+   ============================== */
+
+.free-agents-section {
+  padding: 5rem 0;
+  background: var(--color-bg-secondary);
+}
+
+.agents-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.agents-track {
+  flex: 1;
+  display: flex;
+  gap: 1.5rem;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.agent-card {
+  flex: 0 0 calc(25% - 1.125rem);
+  background: var(--color-bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-soft);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all var(--transition-base);
+}
+
+.agent-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2), var(--shadow-soft);
+  transform: translateY(-4px);
+}
+
+.agent-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.agent-status {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.agent-status.online {
+  background: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent);
+}
+
+.agent-status.offline {
+  background: var(--color-text-muted);
+}
+
+.agent-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.agent-role {
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.agent-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.agent-badge {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.carousel-btn {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  transform: scale(1.05);
+}
+
+.carousel-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 1024px) {
+  .agent-card {
+    flex: 0 0 calc(33.333% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .agent-card {
+    flex: 0 0 calc(50% - 0.75rem);
+  }
+
+  .agents-carousel {
+    gap: 0.5rem;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .agent-card {
+    flex: 0 0 100%;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
 }
 
 /* ==============================
