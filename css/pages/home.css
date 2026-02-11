@@ -216,17 +216,34 @@ body {
 }
 
 .hero__features span {
+  display: flex;
   padding: 0.35rem 0.75rem;
   border-radius: var(--radius-sm);
   background: var(--color-bg-card);
   border: 1px solid var(--color-border-soft);
+  gap: 0.75rem;
 }
+
+.hero__features span img {
+  width: 20px;
+  height: 20px;
+}
+
 
 .hero__actions {
   display: flex;
   gap: 1rem;
 }
 
+.hero__actions a {
+  display: flex;
+}
+
+.hero__actions a img {
+  width: 44px;
+  height: 44px;
+  margin-left: 0.75rem;
+}
 /* ==============================
    SHOWCASE IMAGE
    ============================== */
@@ -598,6 +615,16 @@ body {
   font-family: var(--font-heading);
 }
 
+.tournament-card div {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.tournament-card div img {
+  width: 40px;
+  height: 40px;
+}
+
 .tournament-card ul {
   color: var(--color-text-muted);
   font-size: 0.9rem;
@@ -811,6 +838,15 @@ body {
   flex-wrap: wrap;
 }
 
+.rules-actions a {
+  gap: 0.75rem;
+}
+
+.rules-actions a img {
+  width: 24px;
+  height: 24px;
+}
+
 .rules-actions .btn--secondary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
   color: #fff;
@@ -851,6 +887,17 @@ body {
 .community p {
   color: var(--color-text-muted);
   margin-bottom: 2rem;
+}
+
+.community-btn {
+  display: flex;
+  gap: 0.75rem; 
+}
+
+.community-btn img {
+  width: 44px;
+  height: 44px;
+  
 }
 
 /* ==============================
@@ -1030,6 +1077,16 @@ body {
 .footer__links {
   display: flex;
   gap: 1.25rem;
+}
+
+.footer__links img {
+  width: 40px;
+  height:40px;
+}
+
+.footer__links .img-contact {
+  background-color: var(--color-text-heading);
+  border-radius: 7px;
 }
 
 .footer__links a:hover {
