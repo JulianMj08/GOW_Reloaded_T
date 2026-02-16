@@ -39,14 +39,14 @@ body {
   justify-content: space-between;
 }
 
-.logo {
+.logo a {
   font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 900;
   letter-spacing: 1px;
 }
 
-.logo span {
+.logo a span {
   color: var(--color-primary);
   margin-left: 4px;
 }
@@ -328,7 +328,7 @@ body {
     rgba(59, 130, 246, 0.05),
     rgba(34, 197, 94, 0.03)
   );
-  background: ;
+  /* background: ; */
   position: relative;
   overflow: hidden;
 }

@@ -16,6 +16,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="./css/main.css" />
 
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
@@ -29,13 +30,13 @@
   <!-- ================= HEADER ================= -->
   <header class="header">
     <div class="container header__content">
-      <h1 class="logo">Gears Reloaded<span>Tournaments</span></h1>
+      <h1 class="logo"> <a href="./index.html">Gears Reloaded<span>Tournaments</span></a></h1>
 
       <nav class="nav">
-        <a href="#tournaments">Torneos</a>
-        <a href="#how-it-works">Cómo funciona</a>
-        <a href="#rules">Reglas</a>
-        <a href="#community">Comunidad</a>
+        <a href="#tournaments">Tournaments</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="./views/rules.html">Rules</a>
+        <a href="#community">Community</a>
       </nav>
 
       <button class="hamburger" aria-label="Toggle menu">
@@ -127,6 +128,10 @@
             <div class="highlight-item">
               <span class="highlight-icon">🤝</span>
               <span class="highlight-text">Comunidad Activa</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📖</span>
+              <span class="highlight-text">Reglas Claras</span>
             </div>
           </div>
         </div>
@@ -251,9 +256,6 @@
       </div>
     </div>
   </section>
-
-
-
 
   <!-- ================= TOURNAMENTS ================= -->
   <section id="tournaments" class="section section--dark">
@@ -395,7 +397,7 @@
         <li>Las decisiones administrativas son definitivas</li>
       </ul>
       <div class="rules-actions">
-        <a href="/rules.html" class="btn btn--secondary">
+        <a href="./views/rules.html" class="btn btn--secondary">
            <img src="./assets/icons/libro-de-reglas.png" alt="">
           Official rulebook
         </a>

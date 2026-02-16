@@ -1,0 +1,92 @@
+/* ==============================
+   RULES PAGE
+   ============================== */
+
+.rules-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1.25rem;
+  color: var(--color-text-main);
+  line-height: 1.6;
+}
+
+/* headings hierarchy */
+.rules-container h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-heading);
+}
+
+.rules-container h2 {
+  font-family: var(--font-heading);
+  font-size: 3.6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-heading);
+}
+
+.rules-container h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-heading);
+}
+
+.rules-container p {
+  margin-bottom: 1rem;
+}
+
+/* lists */
+.rules-container ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.rules-container ul ul {
+  list-style-type: circle;
+  margin-top: 0.5rem;
+}
+
+.rules-container ul li {
+  margin-bottom: 0.5rem;
+}
+
+.rules-container ul li::marker {
+  color: var(--color-primary);
+}
+
+/* emphasize important lines */
+.rules-container strong,
+.rules-container b {
+  color: var(--color-text-heading);
+}
+
+/* section spacers */
+.rules-container hr {
+  border: none;
+  border-top: 1px solid var(--color-border-soft);
+  margin: 3rem 0;
+}
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+  .rules-container {
+    margin: 2rem auto;
+  }
+
+  .rules-container h1 {
+    font-size: 2rem;
+  }
+
+  .rules-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .rules-container h3 {
+    font-size: 1.4rem;
+  }
+}
